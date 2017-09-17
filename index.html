@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Global Refer a Friend</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
@@ -24,8 +24,105 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<h2>Global Refer a Friend</h2>
+				</section>
+				<section>
+					<h3>Agenda</h3>
+					<ul>
+						<li>Introduction</li>
+						<li>Components</li>
+						<li>Current State</li>
+						<li>Future State</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Introduction</h3>
+					<p>Refer a Friend program attracts good source of deposits at Capital One 360. </p>
+				</section>
+				<section>
+					<section>
+						<h3>Components</h3>
+						<ul>
+							<li>Landing Pages</li>
+							<li>RAF API</li>
+							<li>Integration with Open Account application</li>
+							<li>Promotion Codes maintenance</li>
+							<li>Fulfillment</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Landing Pages</h3>
+						<p>Any promotion requires a landing page which will be marketed to targeted customers or all customers.</p>
+					</section>
+					<section>
+						<h3>RAF API</h3>
+						<p>Refer a Friend API is currently developed to support tracking referrals and send the referral information to 360 backends (Profile and CST).</p>
+					</section>
+					<section>
+						<h3>Integration with Open Account application</h3>
+						<p>Open Account application, in this case OAO interacts with RAF API to get the referral.</p>
+					</section>
+					<section>
+						<h3>Promotion Codes maintenance</h3>
+						<p>A Batch job is available to maintain Promotion Codes. Each promotion requires a Promotion Code which will have associated bonus amount for both Referrer and Referree. Promotion codes are maintained in CST Database.</p>
+					</section>
+					<section>
+						<h3>Fulfillment</h3>
+						<p>RAF Promotions are being fulfilled by Profile. Non RAF promotions are being fulfilled by Fulfillminator.</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>Current State</h3>
+					</section>
+					<section>
+						<h3>Landing Pages - Architecture</h3>
+						<p>Landing pages are currently being developed using Andromeda technology.</p>
+					</section>
+					<section>
+						<h3>RAF API - Architecture</h3>
+						<p>RAF API is developed using Chassis framework and is currently being deployed using Artemis.</p>
+					</section>
+					<section>
+						<h3>Promotion Batch Job - Architecture</h3>
+						<p>Promotions Batch Job is developed using Spring Batch framework which is currently deployed on AWS Lambda.</p>
+					</section>
+					<section>
+						<h3>Fulfillment</h3>
+						<p>Fulfillment is being done by Profile system as Bonus amount need to be deposited into one of the 360 accounts.</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>Future State</h3>
+					</section>
+					<section>
+						<h3>Landing Pages - Architecture</h3>
+						<p>Landing pages will still be developed using Andromeda technology.</p>
+					</section>
+					<section>
+						<h3>RAF API - Architecture</h3>
+						<p>As RAF API interacts with CST and Profile Systems, it will be enhanced to have the referral details maintained with in its own Database. </p>
+					</section>
+					<section>
+						<h3>Fulfillment</h3>
+						<p>As there are no bonus amounts going forward, the points fulfillment will be maintained by 3rd Party.</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>Future State - New Client Onboarding</h3>
+					</section>
+					<section>
+						<h3>Landing Pages - Architecture</h3>
+						<p>Landing pages will be developed using Andromeda technology.</p>
+					</section>
+					<section>
+						<h3>UI for onboarding new LOBs/Products</h3>
+						<p>As RAF API is going to have its own Database for tracking referral information, onboarding new LOB/Product will need to be maintained in the same Database. A new UI application will be developed for onboarding a new LOB/Product. </p>
+					</section>
+				</section>
 			</div>
 		</div>
 
